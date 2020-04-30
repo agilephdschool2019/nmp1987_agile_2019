@@ -49,7 +49,7 @@ There were two possibility for me to extract my data:
     classify the data and then extract the final maps of urban
     expansion.
 
-```r
+```
 CORINE2018 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2018")
 CORINE2012 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2012")
 CORINE2006 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2006")
@@ -78,7 +78,7 @@ to a unique unit (30-meter resolution) to make them ready to compare,
 then I use some annual growth rate, cell density analysis and image
 difference analysis.
 
-```r
+```
 require(raster)
 ```
 
@@ -86,7 +86,7 @@ require(raster)
 
     Loading required package: sp
 
-```r
+```
 r1 <- raster ("D:/PhD/thesis/Third semester/conferences/GISTAM-6th-Czech/EXPORT MAPS/CORINE-harju.tif")
 
 r2 <- raster("D:/PhD/thesis/Third semester/conferences/GISTAM-6th-Czech/EXPORT MAPS/gGHSL-HARJU.tif")
@@ -94,13 +94,20 @@ r2 <- raster("D:/PhD/thesis/Third semester/conferences/GISTAM-6th-Czech/EXPORT M
 plot(r1)
 ```
 
-![Figure 1: Plot of CORINE Landcover over Harju county](fig1.png)
+```{r, echo = FALSE, out.width="100%", fig.cap="Plot of CORINE Landcover over Harju county"}
+knitr::include_graphics('fig1.png')
+```
 
-```r
+
+```
 plot(r2)
 ```
 
-![Figure 2: Plot of Global Human Settlement Layer over Harju county](fig2.png)
+```{r, echo = FALSE, out.width="100%", fig.cap="Plot of Global Human Settlement Layer over Harju county"}
+knitr::include_graphics('fig2.png')
+```
+
+
 
 
 # Science Communication
@@ -111,4 +118,7 @@ Github to make the repository for my work and commit it whenever I want
 and of course share it with my supervisor to have an interactive editing
 our paper.
 
-![Figure 3: Science Communication workflows interlinked](fig3.png)
+```{r, echo = FALSE, out.width="100%", fig.cap="Science Communication workflows interlinked"}
+knitr::include_graphics('fig3.png')
+```
+
