@@ -4,7 +4,7 @@ author:
   - name: Najmeh Mozaffaree Pour
     affiliation: University of Tartu, Estonia
     email: najmeh.mozaffaree@ut.ee
-abstract: |
+abstract:
    Urban expansion is a complex and dynamic process and plays a significant role in modifying the use of land. The aim of this reaerch is to reach an idea of why and how cities extend in different context of physical, social and economic during the time.
 output:
   ceurticles::twocolpceurws_article
@@ -13,22 +13,11 @@ bibliography: samplebib.bib
 
 # Introduction
 
-Urban expansion is a complex and dynamic process and plays a significant
-role in modifying the use of land. It involves changes in physical and
-functional components of built environment and subsequently accelerates
-the transition of landscape to urban forms.
+Urban expansion is a complex and dynamic process and plays a significant role in modifying the use of land. It involves changes in physical and functional components of built environment and subsequently accelerates the transition of landscape to urban forms.
 
-The most important aim of this reaerch is to reach an idea of why and
-how cities extend in different context of physical, social and economic
-during the time!
+The most important aim of this reaerch is to reach an idea of why and how cities extend in different context of physical, social and economic during the time!
 
-As it needs a lot of efforts, we divided the problem into three parts
-and at the first stage we worked just with the physical dimension of
-urban expansion. It means that we analyzed the dynamic land use changes
-and extracted the urban areas in different timestamps from the two
-remotely sense datasets of CORINE land cover and GHSL; Built-Up Grid to
-map urban expansion at local level for Harju conuty in its context
-(County) in Estonia between 1990 and 2018.
+As it needs a lot of efforts, we divided the problem into three parts and at the first stage we worked just with the physical dimension of urban expansion. It means that we analyzed the dynamic land use changes and extracted the urban areas in different timestamps from the two remotely sense datasets of CORINE land cover and GHSL; Built-Up Grid to map urban expansion at local level for Harju conuty in its context (County) in Estonia between 1990 and 2018.
 
 # Research Framework
 
@@ -36,8 +25,7 @@ This thesis has two key parts:
 
 1) Analyze the spatial data of urban expansion
 
-2) Visualize the spatial data of urban expansion, to make it more
-understandable for wide public and decision makers.
+2) Visualize the spatial data of urban expansion, to make it more understandable for wide public and decision makers.
 
 ## Data Types
 
@@ -45,9 +33,7 @@ understandable for wide public and decision makers.
 
 There were two possibility for me to extract my data:
 
-1. Download the whole data from their official websites as follows, and
-    classify the data and then extract the final maps of urban
-    expansion.
+1. Download the whole data from their official websites as follows, and classify the data and then extract the final maps of urban expansion.
 
 ```
 CORINE2018 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2018")
@@ -58,33 +44,27 @@ CORINE1990 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc
 GHSL_BUILT_UP <- url("https://ghsl.jrc.ec.europa.eu/download.php")
 ```
 
-2. Work on my data in GOOGLE EARTH ENGINE using code editor and extract
-    just the final maps of urban expansion
+2. Work on my data in GOOGLE EARTH ENGINE using code editor and extract just the final maps of urban expansion
 
-I choose the second one and I work on the final products in ArcMap to
-exctract the final analysis.
+I choose the second one and I work on the final products in ArcMap to exctract the final analysis.
 
 ## Data Processing
 
-a.  Google Earth Engine(GEE) platform
+- Google Earth Engine(GEE) platform
 
-b.  ArcMap from the products of ArcGIS Desktop 10.6
+- ArcMap from the products of ArcGIS Desktop 10.6
 
 ## Data Reproducibility
 
-I extracted two urban expansion maps from the two satellite databases,
-GHSL- Built up layer and CORINE land cover database. I resampled them in
-to a unique unit (30-meter resolution) to make them ready to compare,
-then I use some annual growth rate, cell density analysis and image
-difference analysis.
+I extracted two urban expansion maps from the two satellite databases, GHSL- Built up layer and CORINE land cover database. I resampled them in to a unique unit (30-meter resolution) to make them ready to compare, then I use some annual growth rate, cell density analysis and image difference analysis.
 
 ```
 require(raster)
+
+ > Loading required package: raster
+
+ > Loading required package: sp
 ```
-
-    Loading required package: raster
-
-    Loading required package: sp
 
 ```
 r1 <- raster ("D:/PhD/thesis/Third semester/conferences/GISTAM-6th-Czech/EXPORT MAPS/CORINE-harju.tif")
@@ -98,7 +78,6 @@ plot(r1)
 knitr::include_graphics('fig1.png')
 ```
 
-
 ```
 plot(r2)
 ```
@@ -107,18 +86,10 @@ plot(r2)
 knitr::include_graphics('fig2.png')
 ```
 
-
-
-
 # Science Communication
 
-I learned that I can visualize my data in QGIS and use Time manager
-Plugin to make it more dynamic rather than be static. I learn I can use
-Github to make the repository for my work and commit it whenever I want
-and of course share it with my supervisor to have an interactive editing
-our paper.
+I learned that I can visualize my data in QGIS and use Time manager Plugin to make it more dynamic rather than be static. I learn I can use Github to make the repository for my work and commit it whenever I want and of course share it with my supervisor to have an interactive editing our paper.
 
 ```{r, echo = FALSE, out.width="100%", fig.cap="Science Communication workflows interlinked"}
 knitr::include_graphics('fig3.png')
 ```
-
