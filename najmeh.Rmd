@@ -4,7 +4,7 @@ author:
   - name: Najmeh Mozaffaree Pour
     affiliation: University of Tartu, Estonia
     email: najmeh.mozaffaree@ut.ee
-abstract:
+abstract: |
    Urban expansion is a complex and dynamic process and plays a significant role in modifying the use of land. The aim of this reaerch is to reach an idea of why and how cities extend in different context of physical, social and economic during the time.
 output:
   ceurticles::twocolpceurws_article
@@ -23,17 +23,13 @@ As it needs a lot of efforts, we divided the problem into three parts and at the
 
 This thesis has two key parts:
 
-1) Analyze the spatial data of urban expansion
-
-2) Visualize the spatial data of urban expansion, to make it more understandable for wide public and decision makers.
+At first I will analyze the spatial data of urban expansion. And secondly, I will visualize the spatial data of urban expansion, to make it more understandable for wide public and decision makers.
 
 ## Data Types
 
-- Remotely Sensed Data
+_Remotely Sensed Data_ - There were two possibility for me to extract my data:
 
-There were two possibility for me to extract my data:
-
-1. Download the whole data from their official websites as follows, and classify the data and then extract the final maps of urban expansion.
+I download the whole data from their official websites as follows, and classify the data and then extract the final maps of urban expansion.
 
 ```
 CORINE2018 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2018")
@@ -44,15 +40,13 @@ CORINE1990 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc
 GHSL_BUILT_UP <- url("https://ghsl.jrc.ec.europa.eu/download.php")
 ```
 
-2. Work on my data in GOOGLE EARTH ENGINE using code editor and extract just the final maps of urban expansion
+I can work on my data in GOOGLE EARTH ENGINE using code editor and extract just the final maps of urban expansion.
 
 I choose the second one and I work on the final products in ArcMap to exctract the final analysis.
 
 ## Data Processing
 
-- Google Earth Engine(GEE) platform
-
-- ArcMap from the products of ArcGIS Desktop 10.6
+I use Google Earth Engine(GEE) platform and ArcMap from the products of ArcGIS Desktop 10.6.
 
 ## Data Reproducibility
 
