@@ -4,6 +4,7 @@ author:
   - name: Najmeh Mozaffaree Pour
     affiliation: University of Tartu, Estonia
     email: najmeh.mozaffaree@ut.ee
+    orcid: 0000-0001-9969-6631
 abstract: |
    Urban expansion is a complex and dynamic process and plays a significant role in modifying the use of land. The aim of this reaerch is to reach an idea of why and how cities extend in different context of physical, social and economic during the time.
 output:
