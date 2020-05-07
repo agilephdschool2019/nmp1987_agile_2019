@@ -32,14 +32,18 @@ _Remotely Sensed Data_ - There were two possibility for me to extract my data:
 
 I download the whole data from their official websites as follows, and classify the data and then extract the final maps of urban expansion.
 
+\tiny
+
 ```
-CORINE2018 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2018")
+CORINE2018 <- url("https://land.copernicus.eu/¸pan-european/corine-land-cover/clc2018")
 CORINE2012 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2012")
 CORINE2006 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2006")
 CORINE2000 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc2000")
 CORINE1990 <- url("https://land.copernicus.eu/pan-european/corine-land-cover/clc1990")
 GHSL_BUILT_UP <- url("https://ghsl.jrc.ec.europa.eu/download.php")
 ```
+
+\normalsize
 
 I can work on my data in GOOGLE EARTH ENGINE using code editor and extract just the final maps of urban expansion.
 
@@ -53,33 +57,27 @@ I use Google Earth Engine(GEE) platform and ArcMap from the products of ArcGIS D
 
 I extracted two urban expansion maps from the two satellite databases, GHSL- Built up layer and CORINE land cover database. I resampled them in to a unique unit (30-meter resolution) to make them ready to compare, then I use some annual growth rate, cell density analysis and image difference analysis.
 
+\scriptsize
+
 ```
 require(raster)
 
- > Loading required package: raster
+r1 <- raster ("[...]/EXPORT MAPS/CORINE-harju.tif")
+r2 <- raster("[...]/EXPORT MAPS/gGHSL-HARJU.tif")
 
- > Loading required package: sp
-```
-
-```
-r1 <- raster ("D:/PhD/thesis/Third semester/conferences/GISTAM-6th-Czech/EXPORT MAPS/CORINE-harju.tif")
-
-r2 <- raster("D:/PhD/thesis/Third semester/conferences/GISTAM-6th-Czech/EXPORT MAPS/gGHSL-HARJU.tif")
-
-plot(r1)
+plot(r1) # Figure 1
+plot(r2) # Figure 2
 ```
 
 ```{r, echo = FALSE, out.width="100%", fig.cap="Plot of CORINE Landcover over Harju county"}
 knitr::include_graphics('fig1.png')
 ```
 
-```
-plot(r2)
-```
-
 ```{r, echo = FALSE, out.width="100%", fig.cap="Plot of Global Human Settlement Layer over Harju county"}
 knitr::include_graphics('fig2.png')
 ```
+
+\normalsize
 
 # Science Communication
 
